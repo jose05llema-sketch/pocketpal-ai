@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: '18'
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
       - name: Fix line endings
         run: sed -i 's/\r//' android/gradlew
       - name: Grant execute permission
