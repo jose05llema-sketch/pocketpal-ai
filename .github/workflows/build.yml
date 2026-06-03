@@ -14,6 +14,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm install
       - name: Fix line endings
         run: sed -i 's/\r//' android/gradlew
       - name: Grant execute permission
